@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro de ALmunos</title>
 </head>
 <body>
-  <h1>Mi primer trabajo en JS</h1>
+  <h1>Registro de Alumnos</h1>
+    <input type="text" id="nombreAlumno" placeholder="Ingrese el nombre del alumno">
+    <button id="agregarAlumno">Agregar Alumno</button>
+    <div id="notas-contenedor" style="display:none;">
+        <h2>Ingrese las notas</h2>
+        <div id="notasForm"></div>
+        <button id="calcularNotas">Calcular Notas</button>
+    </div>
+    <div id="resultado"></div>
   <script src="js/app.js"></script>  
 </body>
 </html>
