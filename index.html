@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro de Alumnos y Productos</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Registro de Alumnos</h1>
-    <input type="text" id="nombreAlumno" placeholder="Ingrese el nombre del alumno">
+    <input
+      type="text"
+      id="nombreAlumno"
+      placeholder="Ingrese el nombre del alumno"
+    />
     <button id="agregarAlumno">Agregar Alumno</button>
-    <div id="notas-contenedor" style="display:none;">
-        <h2>Ingrese las notas</h2>
-        <div id="notasForm"></div>
-        <button id="calcularNotas">Calcular Notas</button>
+    <div id="notas-contenedor" style="display: none">
+      <h2>Ingrese las notas</h2>
+      <div id="notasForm"></div>
+      <button id="calcularNotas">Calcular Notas</button>
     </div>
     <div id="resultadoDiv"></div>
 
     <h2>Contenidos y aprendizajes</h2>
-    
+
     <button id="descargarPrograma">Descargar Plan de Estudios</button>
     <script src="js/app.js" defer></script>
-</body>
+  </body>
 </html>
