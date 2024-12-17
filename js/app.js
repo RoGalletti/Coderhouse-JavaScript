@@ -24,7 +24,7 @@ agregarAlumnoBtn.onclick = function () {
     mostrarFormularioNotas();
     nombreAlumnoInput.value = "";
   } else {
-    alert("Por favor, ingresa un nombre de alumno.");
+    swal("Por favor, ingresa un nombre de alumno.", "", "warning");
   }
 };
 
@@ -39,13 +39,13 @@ calcularNotasBtn.onclick = function () {
     const alumnos = JSON.parse(localStorage.getItem("alumnos")) || [];
     alumnos.push({ nombre: alumnoActual, promedio: promedio });
     localStorage.setItem("alumnos", JSON.stringify(alumnos));
-    console.log("alumnos:", alumnos);
+
     mostrarResultados();
 
     notasContenedor.style.display = "none";
     notasForm.innerHTML = "";
   } else {
-    alert("Por favor, ingresa todas las notas.");
+    swal("Por favor, ingresa todas las notas.", "", "warning");
   }
 };
 
@@ -73,7 +73,7 @@ descargarPrograma.onclick = function () {
   fetch(programaURL)
     .then((response) => {
       // Verifica si la respuesta fue exitosa
-      if (!response.ok) throw new Error("Error al descargar el archivo");
+      if (!response.ok) swal("Error al descargar el archivo", "", "error");
 
       // Convierte la respuesta en un archivo Blob (archivo binario)
       return response.blob();
@@ -98,7 +98,10 @@ descargarPrograma.onclick = function () {
     })
     .catch((error) =>
       // Maneja y muestra el error
-      console.error("Error al descargar el archivo: ", error)
+      {
+        swal("Error al descargar el archivo", "", "error");
+        console.error("Error al descargar el archivo: ", error);
+      }
     );
 };
 
